@@ -3,7 +3,7 @@ from diapason import calculate_ranges
 
 
 # ----------------------------------------------------------------------
-def parse_urls_from_xml(xml_file):
+def parse_urls_from_xml(xml_file: str):
     """"""
 
     context = etree.iterparse(xml_file)
@@ -14,7 +14,7 @@ def parse_urls_from_xml(xml_file):
     return urls
 
 
-def write_ranges_to_xml(xml_file, ranges):
+def write_ranges_to_xml(xml_file: str, ranges: tuple):
     root = etree.Element('ranges')
     for i in range(len(ranges)):
         child_range = etree.SubElement(root, 'range')
@@ -31,9 +31,3 @@ def write_ranges_to_xml(xml_file, ranges):
 
     tree = etree.ElementTree(root)
     tree.write(xml_file, pretty_print=True)
-
-
-if __name__ == "__main__":
-    print(parse_urls_from_xml('data/in.xml'))
-    write_ranges_to_xml('data/out.xml', calculate_ranges([.45, .687, .09], 13))
-

@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
-def get_all_images_from_link(link):
+def get_all_images_from_link(link: str):
     images = []
     page = BeautifulSoup(urlopen(link), 'lxml')
     attributes = page.findAll('img')
@@ -21,7 +21,7 @@ def get_all_images_from_link(link):
     return images
 
 
-def get_images_from_links(links):
+def get_images_from_links(links: list):
     images = []
     for link in links:
         images_group = get_all_images_from_link(link)

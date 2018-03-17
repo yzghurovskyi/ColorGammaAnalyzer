@@ -1,4 +1,7 @@
-def calculate_brightness(image):
+from PIL import Image
+
+
+def calculate_brightness(image: Image):
     greyscale_image = image.convert('L')
     histogram = greyscale_image.histogram()
     pixels = sum(histogram)
