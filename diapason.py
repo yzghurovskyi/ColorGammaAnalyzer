@@ -1,4 +1,4 @@
-def calculate_ranges(brightness_data, intervals_count):
+def calculate_ranges(brightness_data: list, intervals_count: int):
     diapason_length = round(1.0 / intervals_count, 3)
     lst = [0] * intervals_count
 
@@ -7,5 +7,6 @@ def calculate_ranges(brightness_data, intervals_count):
         lst[number_of_diapason] += 1
     ranges = []
     for i in range(intervals_count):
-        ranges.append((round(diapason_length * i, 2), round(diapason_length * (i + 1), 2), lst[i]))
+        ranges.append((round(diapason_length * i, 2),
+                       round(diapason_length * (i + 1), 2), lst[i]))
     return ranges
