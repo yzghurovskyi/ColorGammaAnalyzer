@@ -16,4 +16,4 @@ def parse_urls_from_xml(xml_file):
 
 if __name__ == "__main__":
     print(parse_urls_from_xml('data/in.xml'))
-    print(calculate_ranges([.45, .687, .09], 10))
+    print(calculate_ranges([.45, .687, .09], 13))
