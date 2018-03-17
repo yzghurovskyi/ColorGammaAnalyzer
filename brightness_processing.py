@@ -14,4 +14,4 @@ def brightness_processing(inner_xml_file: str, outer_xml_file: str):
     write_ranges_to_xml(outer_xml_file, diapasons)
 
 
-brightness_processing("data/in.xml", "data/.out.xml")
+brightness_processing("data/in.xml", "data/out.xml")

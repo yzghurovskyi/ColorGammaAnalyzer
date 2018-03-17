@@ -8,3 +8,5 @@ def convert_images(images: list):
     for i in range(len(images)):
         lst.append(Image.open(BytesIO(images[i])).convert("RGBA"))
     return lst
+
+
