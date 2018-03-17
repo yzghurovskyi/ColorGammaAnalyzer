@@ -3,6 +3,8 @@ from io import BytesIO
 from PIL import Image
 
 
-def convert_base64_to_image(image):
-    return Image.open(BytesIO(image))
-
+def convert_images(images: list):
+    lst = []
+    for i in range(len(images)):
+        lst.append(Image.open(BytesIO(images[i])).convert("RGBA"))
+    return lst
