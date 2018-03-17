@@ -1,11 +1,7 @@
 from lxml import etree
-from diapason import calculate_ranges
 
 
-# ----------------------------------------------------------------------
 def parse_urls_from_xml(xml_file: str):
-    """"""
-
     context = etree.iterparse(xml_file)
     urls = []
     for action, elem in context:
