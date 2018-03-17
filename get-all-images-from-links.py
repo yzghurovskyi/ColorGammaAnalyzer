@@ -25,5 +25,6 @@ def get_images_from_links(links):
 	return images
 
 
-
+links = ['https://www.facebook.com/profile.php?id=100009518003298']
+print(get_images_from_links(links))
 	
