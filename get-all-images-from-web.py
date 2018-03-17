@@ -1,8 +1,6 @@
 import urllib2
 from BeautifulSoup import BeautifulSoup
-from PIL import ImageEnhance
 import base64
-import urllib
 import requests
 
 def get_all_images_from_web(web):
