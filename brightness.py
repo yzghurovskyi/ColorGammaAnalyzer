@@ -1,4 +1,3 @@
-
 def calculate_brightness(image):
     greyscale_image = image.convert('L')
     histogram = greyscale_image.histogram()
@@ -6,7 +5,6 @@ def calculate_brightness(image):
     pixels = sum(histogram)
     print(pixels)
     brightness = scale = len(histogram)
-
     for index in range(scale):
         ratio = histogram[index] / pixels
         brightness += ratio * (-scale + index)
