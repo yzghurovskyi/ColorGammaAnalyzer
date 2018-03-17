@@ -13,7 +13,4 @@ def calculate_brightness(image: Image):
 
 
 def get_images_brightness(images: list):
-    images_brightness = []
-    for index in range(len(images)):
-        images_brightness.append(calculate_brightness(images[index]))
-    return images_brightness
+    return [calculate_brightness(images[i]) for i in range(len(images))]

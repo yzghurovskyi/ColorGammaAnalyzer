@@ -3,11 +3,7 @@ from lxml import etree
 
 def parse_urls_from_xml(xml_file: str):
     context = etree.iterparse(xml_file)
-    urls = []
-    for action, elem in context:
-        if elem.tag == "url":
-            urls.append(elem.text)
-    return urls
+    return [elem.text for action, elem in context if elem.tag == "url"]
 
 
 def write_ranges_to_xml(xml_file: str, ranges: tuple):

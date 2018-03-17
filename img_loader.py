@@ -29,7 +29,6 @@ def get_images_from_links(links: list):
 def get_image_from_src(src: str):
     if "base64" in src:
         return src
-
     if "http" not in src:
         link = "http:" + src
     else:
