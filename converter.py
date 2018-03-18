@@ -11,5 +11,3 @@ def convert_images(images: list) -> list:
         except OSError:
             print("Invalid image!!!")
     return lst
-
-
