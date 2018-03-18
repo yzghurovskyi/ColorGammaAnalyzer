@@ -9,7 +9,7 @@ def convert_images(images: list) -> list:
         try:
             lst.append(Image.open(BytesIO(images[i])).convert("RGBA"))
         except OSError:
-            print("Invalid image")
+            print("Invalid image!!!")
     return lst
 
 
