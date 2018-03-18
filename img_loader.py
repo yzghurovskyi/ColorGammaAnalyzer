@@ -17,8 +17,10 @@ def get_all_images_from_link(link: str):
             try:
                 image = get_image_from_src(src)
                 images.append(image)
-            except (requests.exceptions.MissingSchema, requests.exceptions.InvalidURL):
-                print("Can`t download image({}). Sorry about that!".format(src))
+            except (requests.exceptions.MissingSchema,
+                    requests.exceptions.InvalidURL):
+                print("Can`t download image({}). "
+                      "Sorry about that!".format(src))
     except urllib.error.URLError:
         print('Invalid URL({})'.format(link))
     return images
