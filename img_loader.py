@@ -1,4 +1,5 @@
 import base64
+import urllib.error
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 import requests
@@ -6,17 +7,20 @@ import requests
 
 def get_all_images_from_link(link: str):
     images = []
-    req = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
-    page = BeautifulSoup(urlopen(req), 'html.parser')
-    img_tags = page.findAll(name='img')
-    src_attributes = []
-    src_attributes.extend(set(tag['src'] for tag in img_tags))
-    for src in src_attributes:
-        try:
-            image = get_image_from_src(src)
-            images.append(image)
-        except (requests.exceptions.MissingSchema, requests.exceptions.InvalidURL):
-            print("Can`t download image({}). Sorry about that!".format(src))
+    try:
+        req = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
+        page = BeautifulSoup(urlopen(req), 'html.parser')
+        img_tags = page.findAll(name='img')
+        src_attributes = []
+        src_attributes.extend(set(tag['src'] for tag in img_tags))
+        for src in src_attributes:
+            try:
+                image = get_image_from_src(src)
+                images.append(image)
+            except (requests.exceptions.MissingSchema, requests.exceptions.InvalidURL):
+                print("Can`t download image({}). Sorry about that!".format(src))
+    except urllib.error.URLError:
+        print('Invalid URL')
     return images
 
 
