@@ -1,4 +1,4 @@
-def calculate_ranges(brightness_data: list, intervals_count: int):
+def calculate_ranges(brightness_data: list, intervals_count: int) -> list:
     diapason_length = round(1.0 / intervals_count, 3)
     lst = [0] * intervals_count
 
