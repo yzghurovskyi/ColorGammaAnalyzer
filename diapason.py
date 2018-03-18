@@ -1,4 +1,6 @@
 def calculate_ranges(brightness_data: list, intervals_count: int) -> list:
+    if intervals_count <= 0:
+        raise ValueError("The number of intervals must be greater than 0!!!")
     diapason_length = round(1.0 / intervals_count, 3)
     lst = [0] * intervals_count
 
