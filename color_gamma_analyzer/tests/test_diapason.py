@@ -1,5 +1,5 @@
 import unittest
-from diapason import calculate_ranges
+from color_gamma_analyzer.diapason import calculate_ranges
 
 
 class TestCalculatingOfRanges(unittest.TestCase):

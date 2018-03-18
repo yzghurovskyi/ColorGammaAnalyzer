@@ -1,5 +1,5 @@
 import unittest
-from img_loader import get_all_images_from_link, get_images_from_links
+from color_gamma_analyzer.img_loader import get_all_images_from_link, get_images_from_links
 
 
 class TestImageLoading(unittest.TestCase):

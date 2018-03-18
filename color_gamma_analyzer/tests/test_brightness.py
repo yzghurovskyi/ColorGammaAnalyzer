@@ -1,6 +1,6 @@
 import unittest
 from PIL import Image
-from brightness import calculate_brightness, get_images_brightness
+from color_gamma_analyzer.brightness import calculate_brightness, get_images_brightness
 
 
 class TestBrightnessMethods(unittest.TestCase):

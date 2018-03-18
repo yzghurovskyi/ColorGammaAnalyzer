@@ -1,7 +1,7 @@
 import base64
 import unittest
 
-from converter import convert_images
+from color_gamma_analyzer.converter import convert_images
 
 
 class TestBrightnessMethods(unittest.TestCase):

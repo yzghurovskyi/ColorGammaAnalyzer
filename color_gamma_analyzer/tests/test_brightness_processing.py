@@ -1,6 +1,6 @@
 import unittest
 from lxml import objectify
-from brightness_processing import brightness_processing
+from color_gamma_analyzer.brightness_processing import brightness_processing
 
 
 class TestBrightnessProcessingMethod(unittest.TestCase):

@@ -1,8 +1,8 @@
-from brightness import get_images_brightness
-from diapason import calculate_ranges
-from converter import convert_images
-from img_loader import get_images_from_links
-from xml_util import parse_urls_from_xml, write_ranges_to_xml
+from color_gamma_analyzer.brightness import get_images_brightness
+from color_gamma_analyzer.diapason import calculate_ranges
+from color_gamma_analyzer.converter import convert_images
+from color_gamma_analyzer.img_loader import get_images_from_links
+from color_gamma_analyzer.xml_util import parse_urls_from_xml, write_ranges_to_xml
 
 
 def brightness_processing(

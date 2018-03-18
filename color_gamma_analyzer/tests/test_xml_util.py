@@ -1,6 +1,6 @@
 import unittest
 
-from xml_util import parse_urls_from_xml
+from color_gamma_analyzer.xml_util import parse_urls_from_xml
 
 
 class TestXMLUtilParser(unittest.TestCase):
