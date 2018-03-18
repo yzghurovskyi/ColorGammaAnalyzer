@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
-def get_all_images_from_link(link: str):
+def get_all_images_from_link(link: str) -> list:
     images = []
     try:
         req = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
@@ -26,7 +26,7 @@ def get_all_images_from_link(link: str):
     return images
 
 
-def get_images_from_links(links: list):
+def get_images_from_links(links: list) -> list:
     images = []
     for link in links:
         images_group = get_all_images_from_link(link)
